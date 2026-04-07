@@ -1,0 +1,29 @@
+The Habitainer (Home) ✅
+│
+├── Projects / Portfolio 🚧
+│   ├── Completed Projects 🚧
+│   └── Architecture & Design Models 🚧
+│
+├── Solutions (Categories)
+│   ├── Homes / Cabins ✅
+│   ├── Agriculture Equipment ✅
+│   ├── Hospitality (Resorts & Glamping) 🚧
+│   ├── Commercial Offices 🚧
+│   └── Cafes & Retail Spaces 🚧
+│
+├── Services & Investor Relations
+│   ├── Resale and Rentals 🚧
+│   └── Developers & Investors (B2B) 🚧
+│
+├── Company (About)
+│   ├── About Us 🚧
+│   ├── Our Process (How it Works) 🚧
+│   └── Careers 🚧
+│
+├── Resources
+│   ├── Blogs & Articles 🚧
+│   └── FAQ 🚧
+│
+└── Contact & Support 🚧
+    ├── General Contact Us 🚧
+    └── Book a Free Site Visit 🚧

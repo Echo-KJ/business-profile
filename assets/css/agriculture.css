@@ -1,0 +1,400 @@
+/* ── AGRICULTURE HERO ── */
+.ag-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/agriculture/hero/hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.ag-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+}
+
+.ag-hero-content {
+  position: absolute;
+  bottom: 15%;
+  left: 7%;
+  color: var(--white);
+  max-width: 600px;
+}
+
+.ag-hero-subtitle {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+
+.ag-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+
+/* ── INTRO STRIP ── */
+.intro-strip {
+  background: var(--warm);
+  padding: 60px 40px;
+}
+
+.intro-stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+/* ── TABS ── */
+.products-section {
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid);
+  cursor: pointer;
+  padding-bottom: 10px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.tab-btn:hover {
+  color: var(--black);
+}
+
+.tab-btn.active {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.tab-btn.active::after {
+  width: 100%;
+}
+
+/* ── PRODUCT GRID ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  border: 1px solid var(--border);
+  background: var(--white);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.product-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 24px;
+}
+
+.product-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: var(--mid);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.product-specs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.spec-tag {
+  font-size: 10px;
+  padding: 4px 8px;
+  background: var(--warm);
+  color: var(--mid);
+  border-radius: 4px;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.product-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 12px 10px;
+}
+
+/* ── PANELS ── */
+.detail-panel {
+  display: none;
+  grid-column: 1 / -1;
+  background: var(--warm);
+  padding: 40px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+}
+
+.detail-panel.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-thumbs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.panel-thumbs img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.panel-specs h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: var(--mid);
+}
+
+.panel-specs ul {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.panel-specs ul li {
+  list-style-type: disc;
+  color: var(--black);
+}
+
+.panel-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--mid);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* ── WHY SECTION ── */
+.ag-why {
+  background: var(--black);
+  color: var(--white);
+  padding: 80px 40px;
+}
+
+.ag-why h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ag-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ag-why-card {
+  text-align: center;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ag-why-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 20px 0 10px;
+}
+
+.ag-why-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── PROJECTS ── */
+.ag-projects {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.ag-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 40px auto;
+}
+
+.ag-project {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.ag-project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.ag-project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+
+.ag-project:hover img {
+  transform: scale(1.05);
+}
+
+.ag-project:hover .ag-project-overlay {
+  opacity: 1;
+}
+
+/* ── FORM FAQ ── */
+.ag-form-section {
+  padding: 80px 40px;
+  background: var(--warm);
+}
+
+.ag-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Use existing form-grid classes but just defined generally in global or index. 
+Wait, form-grid is in index.css! Let's duplicate form classes for ag-form since we separated index.css. */
+.ag-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.ag-form-full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .intro-stats { flex-direction: column; gap: 40px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .ag-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .ag-projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .detail-panel.active { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .ag-why-grid { grid-template-columns: 1fr; }
+  .ag-projects-grid { grid-template-columns: 1fr; }
+  .ag-form-grid { grid-template-columns: 1fr; }
+  .ag-hero-content { left: 5%; bottom: 15%; right: 5%; }
+}
